@@ -1,5 +1,4 @@
-import getDomain from '../../lib/getDomain'
-// import fetch from 'isomorphic-fetch';
+import getDomain from '@/lib/getDomain'
 
 async function getData() {
  
