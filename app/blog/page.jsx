@@ -1,13 +1,15 @@
 
 
 async function getData() {
-  const endpoint = "http://localhost:3000/api/promt/" // -> third party api service request? 
+  // const endpoint = "http://localhost:3000/api/promt/" // -> third party api service request? 
   
-    const res = await fetch(endpoint)
-    if (!res.ok) {
-        throw new Error('Failed to fetch data')    }
+  //   const res = await fetch(endpoint)
+  //   if (!res.ok) {
+  //       throw new Error('Failed to fetch data')    }
      
-    return res.json();
+  //   return res.json();
+  return {items: []}
+
 }
 
 
