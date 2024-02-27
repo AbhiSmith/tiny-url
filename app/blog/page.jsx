@@ -2,23 +2,21 @@ import getDomain from '../../lib/getDomain'
 // import fetch from 'isomorphic-fetch';
 
 async function getData() {
-  // const res = await fetch('/api/promt/');
-  // console.log(res.json())
-  const domain =getDomain();
-    
+ 
+  // const domain =getDomain();   
+
   // const endpoint = `${domain}/api/promt/` // -> third party api service request? 
-  const endpoint = `https://127.0.0.1:3000/api/promt/` // -> third party api service request? 
   
-    const res = await fetch("https://127.0.0.1:3000/api/promt/")
-    if (!res.ok) {
-        throw new Error('Failed to fetch data')    }
+  //   const res = await fetch(endpoint)
+  //   if (!res.ok) {
+  //       throw new Error('Failed to fetch data')    }
     
-    if (res.headers.get('content-type').includes('application/json')){
-      return {items: []}
-    }      
+  //   if (res.headers.get('content-type').includes('application/json')){
+  //     return {items: []}
+  //   }      
      
-    return res.json(); 
-    // return {items: []}
+  //   return res.json(); 
+    return {items: []}
 
 }
 
