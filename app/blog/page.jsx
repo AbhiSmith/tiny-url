@@ -9,9 +9,12 @@ async function getData() {
     const res = await fetch(endpoint)
     if (!res.ok) {
         throw new Error('Failed to fetch data')    }
+    
+    if (res.headers.get('content-type').includes('application/json')){
+      return {items: []}
+    }      
      
-    return res.json();
-  // return {items: []}
+    return res.json(); 
 
 }
 
