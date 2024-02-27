@@ -1,14 +1,17 @@
-
+import * as domain from 'domain';
+import getDomain from '../../lib/getDomain'
 
 async function getData() {
-  // const endpoint = "http://localhost:3000/api/promt/" // -> third party api service request? 
+  const domain =getDomain();
   
-  //   const res = await fetch(endpoint)
-  //   if (!res.ok) {
-  //       throw new Error('Failed to fetch data')    }
+  const endpoint = `${domain}/api/promt/` // -> third party api service request? 
+  
+    const res = await fetch(endpoint)
+    if (!res.ok) {
+        throw new Error('Failed to fetch data')    }
      
-  //   return res.json();
-  return {items: []}
+    return res.json();
+  // return {items: []}
 
 }
 
@@ -16,6 +19,7 @@ async function getData() {
 export default async function Blogpage() {
     const data = await getData();
     const items =  data && data.items ? [...data.items] : [];
+    
     return <center>
         <h1>Blog Page</h1>
         <p>Post:</p>
