@@ -9,7 +9,7 @@ async function getData() {
   // const endpoint = `${domain}/api/promt/` // -> third party api service request? 
   const endpoint = `https://127.0.0.1:3000/api/promt/` // -> third party api service request? 
   
-    const res = await fetch(endpoint)
+    const res = await fetch("https://127.0.0.1:3000/api/promt/")
     if (!res.ok) {
         throw new Error('Failed to fetch data')    }
     
