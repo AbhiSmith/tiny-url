@@ -4,7 +4,7 @@ async function getData() {
  
   const domain =getDomain();   
 
-  const endpoint = `${domain}/api/promt/` // -> third party api service request? 
+  const endpoint = `https://127.0.0.1:3000/api/promt/` // -> third party api service request? 
   
     const res = await fetch(endpoint)
     if (!res.ok) {
