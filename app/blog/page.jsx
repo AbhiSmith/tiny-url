@@ -6,7 +6,12 @@ async function getData() {
 
   const endpoint = `${domain}/api/promt/` // -> third party api service request? 
   
-    const res = await fetch(endpoint)
+    const res = await fetch(process.env.NEXT_PUBLIC_VERCEL_URL+'/api/promt')
+    
+    // const res = await fetch(endpoint, {next: {revalidate: 10}})
+
+    // const res = await fetch(endpoint, {cache: "no-cache"}})
+
     if (!res.ok) {
         throw new Error('Failed to fetch data')    }
     
