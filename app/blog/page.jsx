@@ -42,3 +42,6 @@ export default async function Blogpage() {
     </center>
 
 }
+
+
+export const runtime = 'edge' //nodejs
