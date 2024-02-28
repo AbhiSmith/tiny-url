@@ -2,13 +2,11 @@ import getDomain from '@/lib/getDomain'
 
 async function getData() {
  
-  const domain =getDomain();   
+//   const domain =getDomain();   
 
-  const endpoint = `${domain}/api/promt/` // -> third party api service request? 
-  
-    const res = await fetch(process.env.NEXT_PUBLIC_VERCEL_URL+'/api/promt')
-    
-    // const res = await fetch(endpoint, {next: {revalidate: 10}})
+  const endpoint = process.env.NEXT_PUBLIC_VERCEL_URL+'/api/promt' // -> third party api service request? 
+          
+    const res = await fetch(endpoint, {next: {revalidate: 10}})
 
     // const res = await fetch(endpoint, {cache: "no-cache"}})
 
