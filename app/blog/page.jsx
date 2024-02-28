@@ -44,4 +44,5 @@ export default async function Blogpage() {
 }
 
 
-export const runtime = 'edge' //nodejs
+export const runtime = 'edge' //nodejs // adding this latency more faster
+export const preferredRegion = 'auto' // asia-south1 // adding this latency more faster
