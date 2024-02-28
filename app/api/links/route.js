@@ -1,5 +1,13 @@
 
 import isValiDURL from "@/lib/isValidURL"
+import {addLink} from "@/lib/db"
+import { getMinLink } from "@/lib/db";
+
+export async function GET(req, res) {
+    const links = await getMinLink()
+    return new Response(JSON.stringify(links), {status: 200})    
+}
+
 
 export const POST = async (req, res)=> {
 
@@ -20,5 +28,6 @@ export const POST = async (req, res)=> {
         
         return new Response(JSON.stringify({'Invalid': `<${url}> is not valid`}), {status: 400})
     }
-    return new Response(JSON.stringify(data), {status: 201})
+    const dbResponce = await addLink(url)
+    return new Response(JSON.stringify(dbResponce), {status: 201})
 }

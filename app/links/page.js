@@ -1,15 +1,17 @@
 import Image from "next/image";
 import LinkCreateForm from "./creteForm"
-import LinkCreateHtmlForm from "./createHtmlForm"
+// import LinkCreateHtmlForm from "./createHtmlForm"
+import LinkHtmlTable from './table'
 
 
 export default function LinksPage() {
   return (
-      <>
-      <LinkCreateForm/>
-      {/* <LinkCreateHtmlForm/> */} 
-      Testinf just sent data thought raw html from not json.stringy fy
-      </>
+      
+        <div className="justify-center flex-col mt-12">
+          < LinkCreateForm />
+          <LinkHtmlTable />
+        </div>
+      
   );
 }
 

@@ -30,17 +30,17 @@ export default function LinkCreateForm() {
 
     return <>
         
-        <div class="w-full max-w-sm mx-auto mt-4 ">
+        <div className="w-full max-w-sm mx-auto mt-4">
         <form onSubmit={handleform}>
-            <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Enter Url to Shorten </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="url" defaultValue="https://github.com/AbhiSmith/tiny-url" type="text" placeholder=" Enter Url to Shorten"/>
+            <div className="mb-4">
+            <label className="block text-gray-700 text-sm font-bold mb-2" >Enter Url to Shorten </label>
+            <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="url" defaultValue="https://github.com/AbhiSmith/tiny-url" type="text" placeholder=" Enter Url to Shorten"/>
             </div>
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit"> Shorten</button>
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit"> Shorten</button>
         </form>
         
         </div>
-        <div className="flex justify-center items-center h-screen ">
+        <div className="flex justify-center items-center mt-10 ">
             {result && JSON.stringify(result)}
         </div>
        

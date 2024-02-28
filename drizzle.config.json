@@ -1,0 +1,4 @@
+{
+    "schema":  "./lib/schema.js",
+    "out": "./migrations"
+}
