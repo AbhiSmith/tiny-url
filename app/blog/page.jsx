@@ -1,4 +1,5 @@
 import getDomain from '@/lib/getDomain'
+import BlogCard from './card'
 
 async function getData() {
  
@@ -31,7 +32,7 @@ export default async function Blogpage() {
         <h1>Blog Page</h1>
         <p>Post:</p>
         {items.map((item, index) =>{
-            return <li key={`post-${index}`}>{item.title}</li>
+            return <BlogCard  title={item.title} key={`post-${index}`} />
         })}
     </center>
 

@@ -5,7 +5,11 @@ import { NextResponse } from 'next/server';
 // }
 export const GET =  async (req, res)=> {
     return new Response(JSON.stringify({
-        items: [{ id: 1, title: "Hello Abhi" }] 
+        items: [
+            { id: 1, title: "Hello Abhi" },
+            { id: 2, title: "Hello Abhi" },
+            { id: 3, title: "Hello Abhi" },            
+        ] 
     }), {status: 200})
 }
 
