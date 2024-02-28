@@ -5,7 +5,7 @@ import { useState } from "react"
 
 
 
-export default function LinkCreateForm() {
+export default function LinkCreateForm({didSubmit}) {
     const [result, setResult] = useState(null)
 
     const handleform = async (e) => {
@@ -26,17 +26,20 @@ export default function LinkCreateForm() {
         const result = await response.json()
         // console.log(result)
         setResult(result)
+        if (didSubmit) {
+            didSubmit(result)
+        }
     }
 
     return <>
         
-        <div className="w-full max-w-sm mx-auto mt-4">
+        <div className="w-full max-w-lg  mx-auto mt-4">
         <form onSubmit={handleform}>
-            <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" >Enter Url to Shorten </label>
-            <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="url" defaultValue="https://github.com/AbhiSmith/tiny-url" type="text" placeholder=" Enter Url to Shorten"/>
+            <label className="block text-gray-600 text-md font-bold mb-2" >Enter Url to Shorten </label>
+            <div className="mb-4 flex space-between">
+            <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-500 leading-tight focus:outline-none focus:shadow-outline bg-slate-900" name="url" defaultValue="https://github.com/AbhiSmith/tiny-url" type="text" placeholder=" Enter Url to Shorten"/>
+            <button className="bg-gray-600 hover:bg-gray-800  text-gray-800 hover:text-gray-600 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ml-3" type="submit"> Shorten</button>
             </div>
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit"> Shorten</button>
         </form>
         
         </div>

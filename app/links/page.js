@@ -8,7 +8,7 @@ export default function LinksPage() {
   return (
       
         <div className="justify-center flex-col mt-12">
-          < LinkCreateForm />
+          
           <LinkHtmlTable />
         </div>
       
