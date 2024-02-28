@@ -29,7 +29,8 @@ export default function LinkCreateForm() {
     }
 
     return <>
-        <div class="w-full max-w-sm mx-auto mt-4">
+        
+        <div class="w-full max-w-sm mx-auto mt-4 ">
         <form onSubmit={handleform}>
             <div class="mb-4">
             <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Enter Url to Shorten </label>
@@ -37,8 +38,14 @@ export default function LinkCreateForm() {
             </div>
             <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit"> Shorten</button>
         </form>
-        {result &&   JSON.stringify(result)}
+        
         </div>
+        <div className="flex justify-center items-center h-screen ">
+            {result && JSON.stringify(result)}
+        </div>
+       
+
+
          
     </>
 }
