@@ -19,7 +19,7 @@ export const POST = async (req, res)=> {
     const userRecord = dbResponce[0]
     const userRecordId = userRecord?.id    
     const storeUserHash = userRecord?.password
-    const isValidPasswordRequest = comparePassword(password, storeUserHash)
+    const isValidPasswordRequest = await comparePassword(password, storeUserHash)
     if (!isValidPasswordRequest) { 
         return new Response(JSON.stringify({"message": 'Invalid cred, Please try again'}), {status: 400})
     }  
