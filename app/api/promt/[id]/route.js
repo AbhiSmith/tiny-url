@@ -3,7 +3,7 @@
 export const GET = async (req,{ params }) => {
    
     const { id } = params;
-   console.log(req)
+//    console.log(req)
    
     return new Response(JSON.stringify({Dynamic_urlID: id  }));
 }

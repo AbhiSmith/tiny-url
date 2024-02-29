@@ -3,7 +3,7 @@ import isValiDURL from "@/lib/isValidURL"
 import {addLink} from "@/lib/db"
 import { getMinLinkandVisits } from "@/lib/db";
 
-export async function GET(req, res) {
+export async function GET(req, res) {    
     const links = await getMinLinkandVisits(100, 0)
     return new Response(JSON.stringify(links), {status: 200})    
 }
