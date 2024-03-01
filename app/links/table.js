@@ -1,6 +1,7 @@
 "use client"
 import useSWR from "swr";
 import LinkCreateForm from "./creteForm"
+import Link from "next/link";
 // import { getLink } from "@/lib/db";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
@@ -27,6 +28,7 @@ export default function LinkHtmlTable() {
               <th className="px-4 py-2">Id</th>
               <th className="px-4 py-2">Url</th>
               <th className="px-4 py-2">Shorten Url</th>
+              
             </tr>
           </thead>
           <tbody>
@@ -34,7 +36,7 @@ export default function LinkHtmlTable() {
               <tr key={`link-item-${link.id}-${idx}`} className="border-t text-gray-300">
                 <td className="px-4 py-2">{link.id}</td>
                 <td className="px-4 py-2">{link.url}</td>
-                <td className="px-4 py-2">{link.short}</td>
+                <td className="px-4 py-2"><Link href={link.short}>https://tiny-url-liard.vercel.app/{link.short}</Link></td>
               </tr>
             ))}
           </tbody>

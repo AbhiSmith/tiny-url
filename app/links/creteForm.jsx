@@ -37,7 +37,8 @@ export default function LinkCreateForm({didSubmit}) {
         <form onSubmit={handleform}>
             <label className="block text-gray-600 text-md font-bold mb-2" >Enter Url to Shorten </label>
             <div className="mb-4 flex space-between">
-            <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-500 leading-tight focus:outline-none focus:shadow-outline bg-slate-900" name="url" defaultValue="https://github.com/AbhiSmith/tiny-url" type="text" placeholder=" Enter Url to Shorten"/>
+            <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-500 leading-tight focus:outline-none focus:shadow-outline bg-slate-900" name="url"  type="text" placeholder=" Enter Url to Shorten"/>
+            {/* defaultValue="https://github.com/AbhiSmith/tiny-url" */}
             <button className="bg-gray-600 hover:bg-gray-800  text-gray-800 hover:text-gray-600 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ml-3" type="submit"> Shorten</button>
             </div>
         </form>
